@@ -1,12 +1,12 @@
-# Cambridge University Malaysia and Singapore Society (CUMSA)
+# Cambridge University Malaysia and Singapore Association (CUMSA)
 
 This is where CUMSA writes software!
 
 ## Why Open Source?
 
-As the database officer for the 2024-25 committee, I ran on a platform of security. As a society, we handle lots of sensitive data, and it's important that we handle it responsibly. We also need our members to trust us with their data, and that means being transparent about how we handle it.
+As the database officer for the 2024-25 committee, I ran on a platform of security. As a society, we handle lots of sensitive data, and it's important that we do so responsibly. We also need our members to trust us with their data, which means being transparent about how we handle it.
 
-In 2023-24, the committee did a revamp of several membership administration systems. However, the code for these systems was never committed to a version control system, because API credentials were hardcoded. This makes software engineering best practices like code review and continuous integration impossible. Our AWS resources were also being called directly from the frontend, which poses a security risk and increases our attack surface.
+In 2023-24, the committee revamped several membership administration systems. However, the code for these systems was never committed to a version control system, because API credentials were hardcoded. This made software engineering best practices like code review and continuous integration impossible. Our AWS resources were also being called directly from the frontend, which poses a security risk and increases our attack surface.
 
 I worked on an [API gateway](https://github.com/CUMSA/api-gateway) to centralize access to APIs, with a long-term view of a microservices architecture. This is deployed on Vercel, allowing us to manage API credentials in a single place and configure policies such as CORS and rate limiting globally.
 
